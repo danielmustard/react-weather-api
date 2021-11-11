@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './display.css';
 import { FaTemperatureLow, FaTemperatureHigh } from "react-icons/fa";
 import { WiHumidity, WiBarometer,WiStrongWind } from "react-icons/wi";
@@ -6,15 +5,14 @@ import { WiHumidity, WiBarometer,WiStrongWind } from "react-icons/wi";
 
 function Display(props) {
     const {data} = props;
-    const [unknownlocation, setUnknownLocation] = useState(false)
     return (
         <div className="displayWeather">
             <div className="weatherContainer">
                 <div className="location-header">
                 {
-                            unknownlocation == false ?
+                            data !== undefined ?
                             <RenderResults data={data}/>
-                             : <p>Unable to Locate City</p>
+                             :null
                         }
                 </div>                      
                 </div>

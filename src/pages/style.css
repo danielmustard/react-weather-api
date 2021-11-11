@@ -3,11 +3,7 @@ html{
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     background-repeat: no-repeat;
     height: 100%;
-    
-    
-    
 }
-
 body{
     display: flex;
     justify-content: center;
@@ -19,9 +15,9 @@ body{
     text-align: center;
     font-weight: 800;
 }
-input{
+.getWeather{
     text-align: center;
-    width: 500px;
+    width: 100px;
     height: 50px;
     font-family: 'Nanum Gothic', sans-serif;
     outline: none;
@@ -32,8 +28,8 @@ input{
     border-left-style: hidden;
     border-bottom-style: hidden;
 }
-input:focus{
-    background-color:#a8edea;
+input:hover{
+    background-color:white;
 }
 input:focus::placeholder {
     color: transparent;
@@ -49,4 +45,17 @@ a{
 
 li{
     border-style: solid;
+}
+.locationBox{
+    text-align: center;
+    width: 500px;
+    height: 45px;
+    font-family: 'Nanum Gothic', sans-serif;
+    outline: none;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
 }

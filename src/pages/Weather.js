@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useForm, useFormState } from "react-hook-form";
-import { FcSearch } from "react-icons/fc";
 import './style.css'
 import Display from './Display.js'
 
@@ -16,7 +14,7 @@ const Index = () => {
     }
     const WeatherApi = (event) => {
         event.preventDefault();
-        if (form.value == ""){
+        if (form.value === ""){
             alert ('You must enter a location')
         }
         const apiKey = 'eb8620a27a5d9121946b8dbc2c9b504f'
@@ -31,17 +29,11 @@ const Index = () => {
             }))
             .catch ((error) =>{
                 console.log(error);
-                setLocationUnknown('true')
-                console.log(setLocationUnknown)
             });
-        console.log(weather.data);
       }
     const [weather, setWeather] = useState([
         
     ])
-    const [locationUnknown, setLocationUnknown] = useState()
-
-
     return (
     <div>
         <div className="center-title">
@@ -50,12 +42,14 @@ const Index = () => {
             <div className="search-input">
             {/* Form start */}
             <form>
-                <input placeholder="Location" type="text" name="location" onChange={event => handleChange(event)}></input>
+                <input placeholder="Location" className="locationBox" type="text" name="location" onChange={event => handleChange(event)} ></input>
+                <br/>
+                <br/>
                 <input type="submit" value="Submit" className="getWeather" onClick={event => WeatherApi(event)}/>
             </form>
 
             {
-                weather.data != undefined ?
+                weather.data !== undefined ?
                     <div>
                         <Display data={weather.data}/>
                     </div>
