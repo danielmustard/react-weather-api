@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+li{
+    list-style: none;
+}
+.weatherContainer{
+    margin-top: 10%;
+    padding-bottom: 20px;
+}
+.desc-logo{
+    padding-left: 20px;
+    padding-inline-end: 20px;
+}
+
+.location-header{
+    font-family: 'Roboto', sans-serif;
+}
+.data-left{
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    font-size: large;
+    vertical-align: middle;
+    border-style: solid;
+}
+.data-right{
+    display: inline-block;
+    vertical-align: middle;
+}
