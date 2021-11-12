@@ -36,9 +36,9 @@ const RenderResults = (props) => {
                             <FaTemperatureLow size="25"/>
                             : <FaTemperatureHigh size="25"/>
                         }</span></ul> 
-                        <ul><p>Humidity: {data.main.humidity}% <span className="desc-logo"><WiHumidity size="40"/></span></p></ul> 
-                        <ul><p>Pressure: {data.main.pressure} <span className="desc-logo"><WiBarometer size="40"/></span></p></ul>
-                        <ul><p>Wind: {data.wind.speed}Mph <span className="desc-logo"><WiStrongWind size="40"/></span></p></ul>
+                        <ul><p>Humidity: {data.main.humidity}% <span className="desc-logo"><WiHumidity size="40" style={{margin: '-10px'}}/></span></p></ul> 
+                        <ul><p>Pressure: {data.main.pressure} <span className="desc-logo"><WiBarometer size="40" style={{margin: '-10px'}}/></span></p></ul>
+                        <ul><p>Wind: {data.wind.speed}Mph <span className="desc-logo"><WiStrongWind size="40" style={{margin: '-10px'}}/></span></p></ul>
                     </li>
                 </div>
         </div>
